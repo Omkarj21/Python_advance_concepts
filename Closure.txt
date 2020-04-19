@@ -1,0 +1,18 @@
+﻿# Closure |
+----------|
+- Execution of Nested Function outside its scope, this technique is called as Closure.
+- A function defined inside another function is called a Nested Function.
+- Nested functions can access variables of the enclosing scope and these non-local variables are read only by default.
+- To modify value of these non-local variables we have to declare those variables with "nonlocal" keyword inside Nested Function.
+-----------------------------------------------------------------------------------------------------------------------------------
+- Closure is a function(Nested) object that remembers values of enclosing scopes even if they are not present in memory.
+•	Important things of Closure,
+    o	Nested Function should exists
+    o	Nested function must refer values in Enclosing Scope
+    o	Enclosing function(Higher Order) must return nested function reference(Not call to function)
+    o	We can’t call nested function outside of its scope but with the help of Closure we can use/call nested function.
+
+•	Advantages
+    o	Can avoid global values
+    o	Provides kind of data hiding
+    o	Helps in Decorator

@@ -1,0 +1,21 @@
+﻿# Generator |
+------------|
+- Python generators are a simple way of creating iterators(objects).
+- Generator is a function that returns an object(iterator) which we can iterate over (one value at a time).
+- It is as easy as defining a normal function with "yield" statement instead of a "return" statement.
+- If a function contains at least one yield statement (it may contain other yield or return statements), it becomes a generator function. Both yield and return will return some value from a function.
+- The difference is that, while a return statement terminates a function entirely, yield statement pauses the function saving all its states and later continues from there on successive calls.
+- Generator implementation of such sequence is memory friendly and is preferred since it only produces one item at a time.
+- Generators do not store all the values in memory, they generate the values on the fly
+- You cannot perform "for loop" 2nd time on Generator, since generators can only be processed/used once, it forgets previous value
+- Function which contains 1 or more yield it becomes "Generator Function".
+-----------------------------------------------------------------------------------------------------------------------------------
+# Generator Expression |
+-----------------------|
+- The syntax for "Generator Expression" is similar to that of a list comprehension in Python. But the square brackets are replaced with round parentheses.
+- They are kind of lazy, does not produce the required result immediately, produces items only when asked for, i.e. on demand. For this reason, a generator expression is much more memory efficient than an equivalent list comprehension.
+- "Generator Object" : mygenerator = (x*x for x in range(3)) # mygenerator is generator object
+- List Comprehension : [x**2 for x in my_list] : Output = Values in List
+- Dictionary Comprehension : {x**2 for x in my_list} : Output = Values in Dictionary
+- Generator Expression/Comprehension : (x**2 for x in my_list) : Output = Generator Object and This object needs to be parsed using For Loop or using next method.
+

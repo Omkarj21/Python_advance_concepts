@@ -1,0 +1,21 @@
+﻿# Special sequences make commonly used patterns easier to write.
+# --------------------------------------------------------------
+# \A = Matches if the specified characters are at the start of a string.
+#
+# \b = Matches if the specified characters are either at the beginning or at the end of a word.
+# \B = Opposite of \b , Matches if the specified characters are not at the beginning or end of a word.
+#      - This means it should be at middle of word.
+#
+# \d - Matches any decimal digit. Equivalent to [0-9]
+# \D - Matches any non-decimal digit. Equivalent to [^0-9]
+#
+# \s = Matches where a string contains any whitespace character.
+# \S = Matches where a string contains any non-whitespace character
+#
+# \w = Matches any alphanumeric character (digits and alphabets).
+#     - Equivalent to [a-zA-Z0-9_].
+#     - Underscore _ is also considered an alphanumeric character.
+# \W = Matches any non-alphanumeric character. Equivalent to [^a-zA-Z0-9_]
+#
+# \Z = Matches if the specified characters are at the end of a string.
+# ------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,74 @@
+﻿# A Regular Expression (RegEx) is a sequence of characters that defines a search pattern.
+# Metacharacters are characters that are interpreted in a special way by a RegEx engine.
+# Total 11 Metacharacters ->  [] . ^ $ * + ? {} () \ |
+# To check working of it online : https://regex101.com/
+# -----------------------------------------------------
+# Caret Sign ^ & Doller Sign $
+# => ^a...s$
+#     - Any five letter string starting with a and ending with s
+#     - Caret Sign ^ denotes Start-With
+#     - Doller Sign $ denotes End-With
+#     - String Match for above pattern, "alias" = Match, "Alias" = NoMatch
+# ------------------------
+# [] -> Square brackets specifies a set of characters you wish to match.
+# [^abc] means any character except a or b or c
+# [^0-9] means any non-digit character
+# You can also specify a range of characters using - inside square brackets,
+# [a-e] is the same as [abcde].
+# [1-4] is the same as [1234].
+# ------------------------
+# . -> Period matches any single character (except newline '\n').
+# .. = ac or acd (1 Match)
+# .. = abcd (2 matches (contains 4 characters))
+# ------------------------
+# * -> Star matches, zero or more occurrences of the pattern left to it.
+# ma*n : here a* means Zero or More of "a"
+# mn = 1 Match
+# maaan = 1 Match
+# woman = 1 Match
+# main = No Match
+# ------------------------------
+# + -> Plus matches one or more occurrences of the pattern left to it.
+# ma+n : here a+ means atleast One "a" or More of "a" but not zero "a".
+# mn = No match (no a character)
+# maaan = 1 Match
+# woman = 1 Match
+# main = No Match
+# ------------------------
+# ? -> Question Mark matches zero or one occurrence of the pattern left to it.
+# ma?n : here a? means "a" can be Zero time or only One time allowed.
+# mn = man = woman = 1 Match
+# maaan = More than one a present so No Match
+# main = No Match
+# ------------------------
+# {} -> Braces : This means at least n, and at most m repetitions of the pattern left to it.
+# a{2,3} :
+# "abc dat" = No match
+# "abc daat" = 1 match (at daat)
+# "aabc daaat" = 2 matches (at aabc and daaat)
+# "aabc daaaat" =	2 matches (at aabc and daaaat)
+# This RegEx [0-9]{2, 4} matches at least 2 digits but not more than 4 digits,
+# "ab123csde" = 1 Match (match at ab123csde)
+# "12 and 345673" = 2 Matches (at 12 and 345673)
+# "1 and 2" =	No Match
+# a{3} = Exactly 3 a, a{3,} = 3 or more a, a{3,5} = Matches between 3 and 5 (inclusive) consecutive `a` characters.
+# ------------------------
+# | -> Alternation : Vertical bar | is used for alternation (or operator)
+# a|b
+# pqr = No Match
+# acdbea = 3 matches (at acdbea)
+# Here, a|b match any string that contains either a or b
+# ------------------------
+# () -> Group : Parentheses () is used to group sub-patterns.
+# For example, (a|b|c)xz match any string that matches either a or b or c followed by xz
+# Possibilities of above example = axz,bxz,cxz.
+# "ab xz" = No match
+# "abxz" = 1 match (match at abxz)
+# "axz cabxz" = 2 matches (at axzbc cabxz)
+# ------------------------
+# \ -> Backslash is used to escape various characters including all metacharacters.
+# For example,
+# \$a match if a string contains $ followed by a. Here, $ is not interpreted by a RegEx engine in a special way.
+# If you are unsure if a character has special meaning or not, you can put \ in front of it.
+# This makes sure the character is not treated in a special way.
+# -----------------------------------------------------------------------------------------

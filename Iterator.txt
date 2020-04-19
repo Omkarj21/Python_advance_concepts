@@ -1,0 +1,8 @@
+﻿# Iterator |
+-----------|
+- Iterator is an object
+- They are elegantly implemented within for loops, comprehensions, generators..
+- Python iterator object must implement two special methods, __iter__()and __next__(), collectively called the iterator protocols.
+- An object is called iterable if we can get an iterator(i.e. value) from it. Most of built-in containers in Python like: list, tuple, string etc. are iterables.
+- One value at a time, reading items one by one is called iteration.
+-----------------------------------------------------------------------------------------------------------------------------------

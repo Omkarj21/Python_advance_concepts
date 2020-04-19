@@ -1,0 +1,36 @@
+﻿# # Decorator |
+# ------------|
+# - Any callable object that is used to modify a function or a class and return it.
+# - A decorator is a callable that returns a callable object.
+# - Use existing function and customize it without changing its code.
+# - You can change the behavior of existing function at the compile time.
+# - Function that take other function as argument is also called Higher Order Functions.
+# - Decorator has two types :
+#     * Function Decorator
+#     * Class Decorator
+# - Old(Original) function will be passed as argument/parameter to New function in which we are going to customize old(Original) function.
+# - New function will have Nested Function, This Nested function will have Parameters/Arguments of Original function
+# & on the basis of those parameters contains the Logic to Customize Original Function in the function body.
+# - Nested function will return Original function(New Function Parameter) with New(Modified as per requirement) arguments which are going to be passed to Original Function.
+# - New function will return Nested Function reference.
+# - Last do the connection between new and original function with below 2 important steps,
+#     * Take a variable and call new function with original function as a parameter, its recommended to take Original function name as variable name.
+#         1. E.g. "func = smrt_f_div(f_div)" OR "f_div = smrt_f_div(f_div)"
+#             -) Here func is variable(Reference of New Function), recommended to take Original function name as variable name
+#                 i.e. "f_div = smrt_f_div(f_div)" this also work.
+#             -) smrt_f_div is New Function,
+#             -) f_div is Original Function
+#         2. You can use "@ + New function above Original Function" instead above step 1, i.e. instead line "func = smrt_f_div(f_div)".
+#             -) E.g. @smrt_f_div
+#                     def f_div(m,n):
+#                         return m/n
+#             -) Here @smrt_f_div is New Function
+#             -) This should be on above line of old function(here f_div), then old(original) function becomes decorator function,
+#     * Now Call "func" OR "f_div" function, if it is returning any value then Call "func" OR "f_div" function in print block,
+#         E.g. "print(func(4,8))" OR "print(f_div(4,8))"
+#
+# - So Execution is like, When we call Original function, call gets pointed to New function to do the needful operation,
+# then it calls Original function.
+# -----------------------------------------------------------------------------------------------------------------------------------
+# - We can use multiple decorators, i.e. multiple lines with @ sign on original function, execution will starts from
+#     1st @ function which is immediate attached to original function, like this so on...

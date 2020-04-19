@@ -1,0 +1,25 @@
+﻿# Important functions : findall, search, split, match, sub, finditer|
+# ------------------------------------------------------------------|
+# search = If matched pattern found anywhere in string then it returns match object else None, scans through whole string.
+#          - Find something anywhere in the string and return a match object.
+# match = Find something at the beginning of the string and return a match object else None, Does only beginning of string.
+#
+# search & match => match is much faster than search
+# a = "123abc"
+# t = re.match("[a-z]+",a)
+# t = re.search("[a-z]+",a)
+#
+# findall = If matched pattern found in string then it returns all the matches string in a LIST.
+#           - If doesnt match then returns Empty LIST.
+# finditer = If matched pattern found in string then it returns position i.e. starting index and ending index of matched pattern,
+#             here ending index always shows 1 extra position.
+# sub = This is nothing but Substitute/Replace.
+#         - If matched pattern found in string then it replaces with the given string and returns it.
+#         - If the pattern is no found, then returns the original string.
+#         - You can pass COUNT as a fourth parameter, default it is 0 means replace all occurrences.
+# subn = This is same as sub() except 1 thing which is below,
+#         - This returns a tuple of 2 items containing the new string and the number of substitutions made.
+# split = This method splits the string where there is a match and returns a LIST of strings where the splits have occurred.
+#         - If the pattern is no found, re.split() returns a LIST containing an empty string.
+#         - You can pass maxsplit argument to the re.split() method. It's the maximum number of splits that will occur.
+# ----------------------------------------------------------------------------------------------------------------------
